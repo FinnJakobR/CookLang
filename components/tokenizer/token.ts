@@ -28,7 +28,8 @@ export const literal_tokens: tokeType = {
     "_": "TOKEN.UNDERLINE",
     "`": "TOKEN.CODE",
     "[": "TOKEN.OBRACKET",
-    "]": "TOKEN.CBRACKET"
+    "]": "TOKEN.CBRACKET",
+
 }
 
 export type NodeType = (keyof typeof literal_tokens) | (keyof typeof keywords);
@@ -38,7 +39,7 @@ export const keywords: tokeType = {
     "g": "TOKEN.KEYWORD.GRAM",
     "kg": "TOKEN.KEYWORD.KILOGRAM",
     "ml": "TOKEN.KEYWORD.MILITER",
-    "l": "TOKEN.KEYOWRD.LITER",
+    "l": "TOKEN.KEYOWoRD.LITER",
     "tsp": "TOKEN.KEYWORD.TEASPOON",
     "tbsp": "TOKEN.KEYWORD.TABLESPOON",
     "minutes": "TOKEN.KEYWORD.MINUTES",
@@ -46,7 +47,8 @@ export const keywords: tokeType = {
     "days": "TOKEN.KEYWORD.DAYS",
     "seconds": "TOKEN.KEYWORD.SECONDS",
     "procent": "TOKEN.KEYWORD.PROCENT",
-    ">>": "TOKEN.META"
+    ">>": "TOKEN.META",
+    "url": "TOKEN.URL"
 };
 
 

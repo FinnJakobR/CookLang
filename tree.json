@@ -27,42 +27,6 @@
 					"inline": [
 						{
 							"type": "text",
-							"text": "Put"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "a"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "cookware",
-							"name": {
-								"word": "pot",
-								"amount": null,
-								"type": "word"
-							}
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
 							"text": "Peel"
 						},
 						{
@@ -93,1292 +57,278 @@
 							"text": " "
 						},
 						{
-							"type": "text",
-							"text": "and"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "halve,"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "then"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "quarter."
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "Place"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "in"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "boiling"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "water"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "for"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "roughly"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "cookware",
-							"name": {
-								"word": "",
-								"amount": {
-									"type": "amount",
-									"units": {
-										"type": "units",
-										"name": "minutes"
-									},
-									"quantity": {
-										"type": "quantity",
-										"name": "15"
-									},
-									"prop": null
+							"items": [
+								{
+									"type": "text",
+									"text": "*"
 								},
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": "."
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "They"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "should"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "be"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "half"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "cooked"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "at"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "this"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "point,"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "not"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "entirely"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "soft."
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
-							"text": "Remove"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "potatoes"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "from"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "water"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "and"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "allow"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "cool"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "so"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "that"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "you"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "can"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "handle"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "them"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "easily."
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
-							"text": "In"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "meantime"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "prepare"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "a"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "cookware",
-							"name": {
-								"word": "roasting pan",
-								"amount": null,
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "or"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "pyrex"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "dish"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "with"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "an"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "inch"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "of"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "ingredient",
-							"name": {
-								"word": "oil",
-								"amount": {
-									"type": "amount",
-									"units": {
-										"type": "units",
-										"name": "ml"
-									},
-									"quantity": {
-										"type": "quantity",
-										"name": "300"
-									},
-									"prop": null
+								{
+									"type": "text",
+									"text": "*"
 								},
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": ","
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "place"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "this"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "in"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "a"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "preheated"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "oven"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "at"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "180"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "degrees"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "Celsius"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "heat"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "oil."
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
-							"text": "When"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "potatoes"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "are"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "cool"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "enough"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "handle,"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "rough"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "them"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "up"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "with"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "a"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "cookware",
-							"name": {
-								"word": "fork on all sides. Then coat them in @flour",
-								"amount": {
-									"type": "amount",
-									"units": {
-										"type": "units",
-										"name": "cup"
-									},
-									"quantity": {
-										"type": "quantity",
-										"name": "1"
-									},
-									"prop": null
+								{
+									"items": [
+										{
+											"type": "ITALIC",
+											"text": "*",
+											"child": [
+												{
+													"items": [
+														{
+															"type": "underline",
+															"text": "+",
+															"child": [
+																{
+																	"type": "text",
+																	"text": "POTATOES"
+																}
+															]
+														}
+													],
+													"type": "markdown",
+													"text": "markdown"
+												}
+											]
+										}
+									],
+									"type": "markdown",
+									"text": "markdown"
 								},
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "seasoned"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "with"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "ingredient",
-							"name": {
-								"word": "salt and freshly ground @black pepper",
-								"amount": null,
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": "."
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
-							"text": "Check"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "that"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "oil"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "is"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "hot"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "and"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "put"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "potatoes"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "in"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "pan,"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "they"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "should"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "start"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "sizzle"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "immediately."
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "Put"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "in"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "ingredient",
-							"name": {
-								"word": "rosemary",
-								"amount": {
-									"type": "amount",
-									"units": null,
-									"quantity": {
-										"type": "quantity",
-										"name": "a"
-									},
-									"prop": null
+								{
+									"type": "text",
+									"text": " "
 								},
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "few"
-						},
-						{
-							"type": "text",
-							"text": "%"
-						},
-						{
-							"type": "text",
-							"text": "sprigs"
-						},
-						{
-							"type": "text",
-							"text": "}"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "which"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "will"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "flavour"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "the"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "potatoes"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "and"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "allow"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "roast"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "for"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "about"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "cookware",
-							"name": {
-								"word": "",
-								"amount": {
-									"type": "amount",
-									"units": {
-										"type": "units",
-										"name": "minutes"
-									},
-									"quantity": {
-										"type": "quantity",
-										"name": "30"
-									},
-									"prop": null
+								{
+									"type": "text",
+									"text": "and"
 								},
-								"type": "word"
-							}
-						},
-						{
-							"type": "text",
-							"text": "."
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "Be"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "sure"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "to"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "keep"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "turning"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "them"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "so"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "that"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "you"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "get"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "a"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "lovely"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "golden"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "brown"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "colour."
-						}
-					]
-				}
-			]
-		},
-		{
-			"type": "\n",
-			"value": "step",
-			"step": [
-				{
-					"type": "line",
-					"value": "line",
-					"inline": [
-						{
-							"type": "text",
-							"text": "Serve"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "with"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "your"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "favourite"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "roast,"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "vegetables"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "and"
-						},
-						{
-							"type": "text",
-							"text": " "
-						},
-						{
-							"type": "text",
-							"text": "gravy."
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "halve,"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "url"
+								},
+								{
+									"type": "text",
+									"text": "("
+								},
+								{
+									"type": "text",
+									"text": "HELLO"
+								},
+								{
+									"type": "text",
+									"text": ")"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "then"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "quarter."
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "Place"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "in"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "the"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "boiling"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "water"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "for"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "roughly"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "~"
+								},
+								{
+									"type": "text",
+									"text": "{"
+								},
+								{
+									"type": "text",
+									"text": "15"
+								},
+								{
+									"type": "text",
+									"text": "%"
+								},
+								{
+									"type": "text",
+									"text": "minutes"
+								},
+								{
+									"type": "text",
+									"text": "}"
+								},
+								{
+									"type": "text",
+									"text": "."
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "They"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "should"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "be"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "half"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "cooked"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "at"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "this"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "point,"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "not"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "entirely"
+								},
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"text": "soft."
+								}
+							],
+							"type": "markdown",
+							"text": "markdown"
 						}
 					]
 				}

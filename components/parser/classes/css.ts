@@ -2,14 +2,11 @@ export default class CSS {
     text = "css";
     type = "css";
     props: CSS_PROP[];
-    child: any;
+    childs: any;
 
-    constructor(props: CSS_PROP[]){
+    constructor(props: CSS_PROP[], childs: any){
         this.props = props;
-    }
-
-    addChild(child: any){
-        this.child = child;
+        this.childs = childs;
     }
 }
 

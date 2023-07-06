@@ -18,6 +18,8 @@ import BOLD from "./classes/bold";
 import ITALIC from "./classes/italic";
 import UNDERLNE from "./classes/underline";
 import CSS, { CSS_PROP } from "./classes/css";
+import LINK from "./classes/link";
+import { url } from "inspector";
 
 interface Chache {
     [char: string]: string;
@@ -210,6 +212,8 @@ export default class Parser {
             return this.cookware();
         }else if(this.accept("TOKEN.TILE")){
             return this.timer();
+        }else if(this.accept("TOKEN.URL")){
+            return this.link();
         }else{
             return this.markdown();
 
@@ -238,6 +242,7 @@ export default class Parser {
     //
 
     markdown(): MARKDOWN | TEXT{
+        console.log(this.currentToken);
         if(this.accept("TOKEN.MULTI")){
             return this.boldItalic("TOKEN.MULTI", "*");
         } else if(this.accept("TOKEN.UNDERLINE")){
@@ -285,19 +290,26 @@ export default class Parser {
         var name = this.currentToken!.text;
         var chachedName = "";
         var amount = null; 
+        var i = 0;
 
         this.nextToken();
 
-        while(this.currentToken!.type != "TOKEN.NEWLINE" && this.currentToken!.type != "TOKEN.END"){
-            if(this.accept("TOKEN.CURLYOPAREN")){
+        while(this.lookUpToken(i)!.type != "TOKEN.NEWLINE" && this.lookUpToken(i)!.type != "TOKEN.END"){
+            if(this.lookUpToken(i)!.type == "TOKEN.CURLYOPAREN"){
+                
+                while(i >= 0 ){
+                    this.nextToken();
+                    i--;
+                }
                 amount = this.amount();
                 name += chachedName;
                 this.accept("TOKEN.CURLYCPAREN");
                 break;
             }
-            chachedName += this.currentToken!.text;
-            this.nextToken();
+            chachedName += this.lookUpToken(i)!.text;
+            i++;
         }
+
 
         return new WORD(name, amount);
 
@@ -354,153 +366,74 @@ export default class Parser {
 
     boldItalic(TOKEN:string, t:string):MARKDOWN{
         var mark = new MARKDOWN();
+        var childs = [];
         var left = 1;
         var right = 0;
 
-        while(this.accept(TOKEN)) left ++;
+        while(this.currentToken!.type == TOKEN && (left != 2)){ 
+            left++;
+            this.nextToken();
+        };
 
-        var child = this.markdown();
+        var isLeftBold = left == 2;
 
-        while(this.accept(TOKEN)) right ++;
+        childs.push(this.markdown());
 
-        if(left == right){
+        while(!this.accept(TOKEN)){
+            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
 
-            if(left > 3){
-                // BOLD(ITALIC)
-
-                var i = 3;
-
-                while(i != left){
-                    mark.addItem(new TEXT("text", t));
-                    i++;
-                };
-
-                var ii = 3;
-
-
-                mark.addItem(new BOLD(new ITALIC(child)));
-
-                while(ii != right){
-                    mark.addItem(new TEXT("text", t));
-                    ii++;
+                while(left > 0){
+                    childs.unshift(new TEXT("text", t));
+                    left --; 
                 }
 
+                mark.items = childs;
 
-            } 
-
-            if(left == 2){
-                mark.addItem(new BOLD(child));
-            }
-
-            if(left == 1) {
-               mark.addItem(new ITALIC(child));
-            }
+                return mark;
+            }  
+            childs.push(this.markdown());
         }
 
-        if(left > right){
-            
-            while(left != right){
-                mark.addItem(new TEXT("text", t))
-                left --;
-            }
+        right = 1;
 
-            if(right > 3){
-                // BOLD(ITALIC)
-
-                var i = 3;
-
-                while(i != left){
-                    mark.addItem(new TEXT("text", t));
-                    i++;
-                };
-
-                var ii = 3;
+        while(this.currentToken!.type == TOKEN && (right != left)) {
+            right ++
+            this.nextToken();
+        } ;
 
 
-                mark.addItem(new BOLD(new ITALIC(child)));
+        var isRightBold = right == 2;
 
-                while(ii != right){
-                    mark.addItem(new TEXT("text", t));
-                    ii++;
-                }
-
-
-            } 
-
-            if(right == 2){
-                mark.addItem(new BOLD(child));
-            }
-
-            if(right == 1) {
-               mark.addItem(new ITALIC(child));
-            }
+        if(isRightBold && isLeftBold){
+            mark.addItem(new BOLD(childs));
+        }else if(!isRightBold && isLeftBold){
+            mark.addItem(new TEXT("text", t));
+            mark.addItem(new ITALIC(childs));
+        }else if(isRightBold && !isLeftBold){
+            mark.addItem(new ITALIC(childs));
+            mark.addItem(new TEXT("text", t));
+        }else if(!isRightBold && !isLeftBold){
+            mark.addItem(new ITALIC(childs));
         }
 
-        if(left < right){
-            var diff = right - left;
-
-            if(left > 3){
-                // BOLD(ITALIC)
-
-                var i = 3;
-
-                while(i != left){
-                    mark.addItem(new TEXT("text", "*"));
-                    i++;
-                };
-
-                var ii = 3;
-
-
-                mark.addItem(new BOLD(new ITALIC(child)));
-
-                while(ii != right){
-                    mark.addItem(new TEXT("text", "*"));
-                    ii++;
-                }
-
-
-            } 
-
-            if(left == 2){
-                mark.addItem(new BOLD(child));
-            }
-
-            if(left == 1) {
-               mark.addItem(new ITALIC(child));
-            }
-
-            for (let i = 0; i < diff; i++) {
-                mark.addItem(new TEXT("text", "*"));
-            }
-        }
-
+        
+        
         return mark;
     }
 
     underline(TOKEN: string, t: string): MARKDOWN{
         var mark = new MARKDOWN();
-        var left = 1;
-        var right = 0;
-        var childs = [];
 
-        while(this.accept(TOKEN)) left++;
+        var childs = [this.markdown()];
 
-        var diff_left = left - 1;
-
-        childs.push(this.markdown());
 
 
         while(!this.accept(TOKEN)){
-            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
-                
-                for (let d_l = 0; d_l < left; d_l++) {
-                    mark.addItem(new TEXT("text", t));
-                }
 
-                for (let childs_index = 0; childs_index < childs.length; childs_index++) {
-                    mark.addItem(childs[childs_index]);
-                }
+            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
+                    childs.unshift(new TEXT("text", t));
+
+                mark.items = childs;
 
                 return mark;
             }  
@@ -508,91 +441,54 @@ export default class Parser {
             childs.push(this.markdown());
         }
 
-        right = 1;
+        mark.addItem(new UNDERLNE(childs));
 
-        while(this.accept(TOKEN)) right ++;
-
-
-        for (let d_l = 0; d_l < diff_left; d_l++) {
-            mark.addItem(new TEXT("text", t))
-        }
-
-        var child = new MARKDOWN();
-        
-        child.items = childs;
-
-        if(right > 0){
-            mark.addItem(new UNDERLNE(child));
-
-            var diff_right = right -1;
-
-            for (let d_r = 0; d_r < diff_right; d_r++) {
-                
-                mark.addItem(new TEXT("text",t));
-                
-            }
-        }
 
         return mark;
     }
 
     css(TOKEN:string, t:string): MARKDOWN{
         var mark = new MARKDOWN();
-        var left = 1;
-        var right = 0;
+
+        var childs = [this.markdown()];
 
         var props = null;
 
-        while(this.accept(TOKEN)) left++;
+        while(!this.accept(TOKEN)){
 
-        var child = this.markdown();
+            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
+                childs.unshift(new TEXT("text", t));
 
-        while(this.accept(TOKEN)) right++;
+            mark.items = childs;
 
-        if(this.accept("TOKEN.CURLYOPAREN")){
-             props = this.cssProps();
-            this.expect("TOKEN.CURLYCPAREN");
+            return mark;
+        }  
+            childs.push(this.markdown());
         }
 
-        var diff_left = left  - 1;
+        if(this.accept("TOKEN.OBRACKET")){
+            props = this.cssProps();
+           this.expect("TOKEN.CBRACKET");
+       }
 
-        for (let d_l = 0; d_l < diff_left; d_l++) {
+       mark.addItem(new CSS(props ?? [], childs))
 
-            mark.addItem(new TEXT("text", t));
-            
-        }
-
-
-        if(right > 0){
-            var css = new CSS(props ?? [])
-
-            css.addChild(child);
-
-            mark.addItem(css);
-
-            var diff_right = right -1;
-
-
-        for (let d_r = 0; d_r < diff_right; d_r++) {
-            mark.addItem(new TEXT("text", t));
-            
-        }
-    }
         return mark;
     }
 
     link(){
-        var mark = new MARKDOWN();
-        if(!this.accept("TOKEN.OBRACKET")) {
-            return new TEXT("text", "!");
-        };
+        this.expect("TOKEN.OPAREN");
+        var url = "";
 
 
+        while(!this.accept("TOKEN.CPAREN")){
+            url += this.currentToken!.text;
+            this.nextToken();
+        }
 
-
-        
-        
+        return new LINK([],url);
     }
+
 
     cssProps(): CSS_PROP[]{
         var props: CSS_PROP[] = [];
@@ -609,11 +505,15 @@ export default class Parser {
         this.except("TOKEN.CURLYOPAREN");
         this.except("TOKEN.NEWLINE");
 
+        while(this.accept("TOKEN.WHITESPACE"));
+
         var prop = this.currentToken!.text;
 
         this.nextToken();
 
         props.push(new CSS_PROP(value, prop));
+
+        while(this.accept("TOKEN.WHITESPACE"));
 
         while(this.accept("TOKEN.COMMA")){
             this.except("TOKEN.CURLYOPAREN");
@@ -635,9 +535,6 @@ export default class Parser {
             props.push(new CSS_PROP(value, prop));
 
         }
-
-        console.log(this.currentToken);
-        console.log(props);
 
         return props;
     }
