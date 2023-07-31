@@ -1,552 +1,509 @@
-import { Token, literal_tokens } from "../tokenizer/token";
-import METADATA from "./classes/metadata";
 import ParsingTree from "./classes/tree";
-import STEP from "./classes/step";
-import LINE from "./classes/line";
-import { text } from "stream/consumers";
+import { Token, literal_tokens } from "../tokenizer/token";
 import TEXT from "./classes/text";
-import WORD from "./classes/word";
-import AMOUNT from "./classes/amount";
+import METADATA from "./classes/metadata";
+import STEP from "./classes/step";
 import INGREDIENT from "./classes/ingredients";
+import AMOUNT from "./classes/amount";
+import MARKDOWN from "./classes/markdown";
 import COOKWARE from "./classes/cookware";
 import TIMER from "./classes/timer";
-import UNIT from "./classes/units";
-import QUANTITY from "./classes/quantity";
-import PROPOTIAL from "./classes/propotial";
-import MARKDOWN from "./classes/markdown";
+import UNDERLNE from "./classes/underline";
+import LINK from "./classes/link";
 import BOLD from "./classes/bold";
 import ITALIC from "./classes/italic";
-import UNDERLNE from "./classes/underline";
-import CSS, { CSS_PROP } from "./classes/css";
-import LINK from "./classes/link";
-import { url } from "inspector";
+import { run } from "node:test";
+import { getEnvironmentData } from "node:worker_threads";
+import { start } from "node:repl";
 
-interface Chache {
-    [char: string]: string;
-}
+interface Run {
+    run:    string;
+    child: any[];
+  }
+
 
 export default class Parser {
     tokens: Token[];
     currentToken: Token | null;
     currentIndex: number;
-    chache: Chache;
     tree: ParsingTree;
+    currentEndIndex: number;
+    currentLevel: number;
 
     constructor(){
         this.tokens = [];
         this.currentToken = null;
         this.currentIndex = 0;
-        this.chache = {};
         this.tree = new ParsingTree();
+        this.currentEndIndex = Infinity;
+        this.currentLevel = -1;
     }
-
-    nextToken(): void {
-        this.currentIndex = this.currentIndex + 1;
+    
+    nextToken(index?:number): void  {
+       index ?  (this.currentIndex += index) : this.currentIndex += 1;
         this.currentToken = this.tokens[this.currentIndex];
     }
 
-    accept(tokenName: string): boolean{
-        if (this.currentToken?.type === tokenName){
-            this.nextToken();
-            return true;
-        };
-
-        return false;
+    beforeToken(): void {
+        this.currentIndex-=1;
+        this.currentToken = this.tokens[this.currentIndex];
     }
 
-    lookUpToken(index: number): Token {
+    lookUpToken(index:number):Token{
         return this.tokens[this.currentIndex + index];
     }
 
-    expect(tokenName: string): boolean {
+    accept(tokenName:string):boolean{
+        
+        if(this.currentToken!.type === tokenName) return true;
+        
+        return false;
+    }
+
+    expect(tokenName:string): boolean | TEXT{
         if(this.accept(tokenName)) return true;
 
-        throw new Error("unexpected Token: " +  this.currentToken!.type + " at line: " + this.currentToken!.location.row + ", expected Token: " + tokenName );
-    }
-
-    except(tokenName: string): boolean {
-        if(!this.accept(tokenName)) return true;
-
-        throw new Error("unexpected Token: " + tokenName);
-    }
-
-    acceptAll(tokenName: string): boolean{
-        return this.currentToken!.type.includes(tokenName);
-    }
-
-    //programm
-    recipe(): ParsingTree {
-
-        var tree = new ParsingTree();
-
-        if(this.accept("TOKEN.META")){
-
-            var newMeta = this.metaData();
-            tree.addMetaData(newMeta);
-
-            //es gibt entweder eine Meta oder ein Step
-
-        }
-
-        while(this.accept("TOKEN.META")){
-                var newMeta = this.metaData();
-                tree.addMetaData(newMeta);
-        }
-
-
-        var step = this.step();
-
-        var i = 0
-
-        while(step != null){
-            tree.addStep(step);
-            step = this.step();
-            i++;
-
-        }
-
-        return tree;
-
-    }
-
-    metaData(){
-
-        this.except("TOKEN.NEWLINE");
-        this.except("TOKEN.DOUBLEPOINT");
-
-        var title: string = this.currentToken!.text;
+        var t = this.currentToken!.text;
 
         this.nextToken();
 
+        return new TEXT("text",t,t);
+    }
 
-        //Title -----------------------------------
+    isEnd():boolean{
+        
+        if(this.currentIndex == this.tokens.length - 1) return true;
 
-        while(!(this.accept("TOKEN.DOUBLEPOINT"))){
-            
-            this.except("TOKEN.NEWLINE");
-            this.except("TOKEN.END");
+        else return false;
+    }
 
-            title+= this.currentToken!.text;
+    chopLine():void{
+        while(this.accept("TOKEN.NEWLINE")) this.nextToken();
+    }
+
+    recipe():ParsingTree{
+
+        while(!this.isEnd()){
+            if(this.isMetaData()){
+                this.nextToken();
+                var meta = this.metaData();
+
+                if(meta) this.tree.addMetaData(meta);
+                else {
+                    this.beforeToken();
+                    var step = this.step();
+                    this.tree.addStep(step);
+                }
+                this.chopLine();
+            }else{
+                var step = this.step();
+                this.tree.addStep(step);
+                this.chopLine();
+            }
+        }
+
+        return this.tree;
+    }
+
+    lookUntil(tokenName:string, startIndex = 0, types: string[] = []): boolean{
+        var lookUpIndex = startIndex;
+        while(this.lookUpToken(lookUpIndex)!.type !== tokenName){
+            if(this.lookUpToken(lookUpIndex)!.type === "TOKEN.NEWLINE" || this.lookUpToken(lookUpIndex)!.type === "TOKEN.END" || types.includes(this.lookUpToken(lookUpIndex)!.type)) return false;
+            lookUpIndex++;
+        }
+        return true;
+    }
+
+    isMetaData():boolean{
+    
+        return this.accept("TOKEN.META") && this.lookUntil("TOKEN.DOUBLEPOINT")
+    }
+
+    metaData():METADATA | null {
+        
+        var option = "";
+        var data = "";
+
+        var hasDoublePoint = this.lookUntil("TOKEN.DOUBLEPOINT");
+
+        if(!hasDoublePoint) return null;
+
+        while(!this.accept("TOKEN.DOUBLEPOINT")){
+            option+=this.currentToken!.text;
             this.nextToken();
         }
-        
-        
-         //Title -----------------------------------
 
-         //Data ------------------------------------
+        this.nextToken();
 
-         this.except("TOKEN.END");
-         this.except("TOKEN.NEWLINE");
-
-
-
-         
-         var data = [this.inline()];
-        
-
-         while(!this.accept("TOKEN.NEWLINE") && !this.accept("TOKEN.END")){
-            data.push(this.inline());
-         }
-
-          //Data ------------------------------------
-
-         this.chopLine();
-
-         return new METADATA(data, ">>", title);
-
-    }
-
-    chopLine(){
-        while(this.accept("TOKEN.NEWLINE"));
-    }
-
-    step(): STEP | null{
-
-        if(!this.currentToken) return null;
-
-        var line = this.line();
-
-        var step = new STEP("\n", "step")
-
-        if(!line) throw Error("Provide at least one Inline Token");
-
-        step.addSteps(line);
-
-        while(this.accept("TOKEN.NEWLINE")){
-
-            if(this.accept("TOKEN.NEWLINE")) break;
-             line = this.line();
-            step.addSteps(line);
+        while(!this.accept("TOKEN.NEWLINE") && !this.isEnd()){
+            data+=this.currentToken!.text;
+            this.nextToken();
         }
 
-        this.chopLine();
-
-        if(step.step.length == 0) return null;
-
-        return step;
+        return new METADATA(option.trim(),data.trim(),"meta",`>>${option}:${data}`);
     }
 
-    line():LINE{
-        var line = new LINE("line", "line");
-        this.except("TOKEN.NEWLINE");
+    step(): STEP{
+        var inline: any[] = [];
 
-        var inlineToken = this.inline();
-
-        line.addInline(inlineToken);
-
-        while(this.currentToken!.type != "TOKEN.NEWLINE" && !this.accept("TOKEN.END")){
-
-            inlineToken = this.inline();
-            line.addInline(inlineToken);
+        while(!(this.accept("TOKEN.NEWLINE") && this.lookUpToken(1)!.type === "TOKEN.NEWLINE") && !this.isEnd()){
+            var inlineTokens = this.inline();
+            inline.push(inlineTokens);
         }
 
-        return line;
-
-    };
+        return new STEP("step", "", inline);
+    }
 
     inline(){
-        if(this.accept("TOKEN.AT")){
-            var f = this.ingredient();
-            return f;
-        } else if(this.accept("TOKEN.HASH")){
-            return this.cookware();
-        }else if(this.accept("TOKEN.TILE")){
-            return this.timer();
-        }else if(this.accept("TOKEN.URL")){
-            return this.link();
-        }else{
-            return this.markdown();
-
-        }
-    };
-
-    ingredient(){
-        var name: WORD = this.word();
-
-        return new INGREDIENT(name);
-    }
-    //***HALLO**
-
-    //*HALLO**
-
-    //1 u. 1  = ITALIC
-    //1 u. 2 = ITALIC + TEXT 
-    //2 u. 1 = TEXT + ITALIC
-    //2 u. 2 = BOLD
-    //3 u. 2 = TEXT BOLD ist 
-
-    //6 u. 6 = *******TEXT******
-    
-    
-
-    //
-
-    markdown(): MARKDOWN | TEXT{
-        console.log(this.currentToken);
-        if(this.accept("TOKEN.MULTI")){
-            return this.boldItalic("TOKEN.MULTI", "*");
-        } else if(this.accept("TOKEN.UNDERLINE")){
-            return this.boldItalic("TOKEN.UNDERLINE", "_");
-        } else if(this.accept("TOKEN.ADD")){
-            return this.underline("TOKEN.ADD", "+");
-        }else if(this.accept("TOKEN.CODE")){
-            return this.css("TOKEN.CODE", "`");
+        if(this.isIngredient()){
+            var ingredient = this.ingredient();
+            return ingredient;
+        }else if (this.isCookWare()){
+            var cookware = this.cookware();
+            return cookware;
+        }else if(this.isTimer()){
+            var timer = this.timer();
+            return timer;
+        }else if(this.isBoldItalic()){
+            console.log("BOLD ITALIC");
+            var boldItalic = this.boldItalic();
+            return boldItalic;
+        }else if(this.isUrl()){
+            var url = this.url();
+            return url;
+        }else if(this.isUnderline()){
+            var underline = this.underline()
+            return underline;
         }else{
             var t = this.currentToken!.text;
             this.nextToken();
-            return new TEXT("text", t ?? "");
+            return new TEXT("text",t,t);
         }
     }
 
 
+    inline2(){
+        if(this.isIngredient()){
+            var ingredient = this.ingredient();
+            return ingredient;
+        }else if (this.isCookWare()){
+            var cookware = this.cookware();
+            return cookware;
+        }else if(this.isTimer()){
+            var timer = this.timer();
+            return timer;
+        }else if(this.isUrl()){
+            var url = this.url();
+            return url;
+        }else if(this.isUnderline()){
+            var underline = this.underline()
+            return underline;
+        }else{
+            var t = this.currentToken!.text;
+            this.nextToken();
+            return new TEXT("text",t,t);
+        }
+    }
 
+
+    isIngredient(){
+        return this.accept("TOKEN.AT") && this.lookUpToken(1).type != "TOKEN.WHITESPACE";
+    }
+
+    isCookWare(){
+        return this.accept("TOKEN.HASH") && this.lookUpToken(1).type != "TOKEN.WHITESPACE";
+    }
+
+    isTimer(){
+        return this.accept("TOKEN.TILE") && this.lookUntil("TOKEN.CURLYOPAREN");
+    }
+
+    isBoldItalic(){
+        return ((this.accept("TOKEN.MULTI") || this.accept("TOKEN.UNDERLINE")));
+    }
+
+    isUrl(){
+        return this.accept("TOKEN.OBRACKET") && this.lookUntil("TOKEN.CBRACKET") && this.lookUntil("TOKEN.OPAREN") && this.lookUntil("TOKEN.CPAREN");
+    }
+
+    isUnderline(){
+        return this.accept("TOKEN.ADD") && this.lookUntil("TOKEN.ADD",1);
+    }
+
+    ingredient(){
+        this.nextToken();
+        var word = this.word();
+        var amount = null;
+
+        var hasAmount = (this.accept("TOKEN.CURLYOPAREN") && this.lookUntil("TOKEN.CURLYCPAREN"));
+
+        if(hasAmount) amount = this.amount();
+
+        return new INGREDIENT("ingredient","",word,amount)
+    }
 
     cookware(){
-        var name: WORD = this.word();
-        return new COOKWARE(name);
+        this.nextToken();
+        var word = this.word();
+        var amount = null;
+
+        var hasAmount = (this.accept("TOKEN.CURLYOPAREN") && this.lookUntil("TOKEN.CURLYCPAREN"));
+
+        if(hasAmount) amount = this.amount();
+
+        return new COOKWARE("cookware","",word,amount)
     }
 
     timer(){
-        this.except("TOKEN.NEWLINE");
-        this.except("TOKEN.END");
+        this.nextToken();
+        var noName = this.accept("TOKEN.CURLYOPAREN");
 
-        if(this.accept("TOKEN.CURLYOPAREN")){
+        if(noName){
             var amount = this.amount();
-            var name = new WORD("", amount);
-            return new TIMER(name);
+            return new TIMER("timer","","",amount);
         }
 
-        var name: WORD = this.word();
-
-        return new TIMER(name);
+        var name = this.word();
+        var amount = this.amount();
+        return new TIMER("timer","",name,amount);
     }
 
-    word(): WORD{
-        this.except("TOKEN.NEWLINE");
-        this.except("TOKEN.END");
-        this.except("TOKEN.CURLYOPAREN");
-        this.except("TOKEN.WHITESPACE");
-
-        var name = this.currentToken!.text;
-        var chachedName = "";
-        var amount = null; 
-        var i = 0;
-
+    underline(): UNDERLNE{
+        this.nextToken();
+        var childTokens = [];
+        
+        while(!this.accept("TOKEN.ADD")){
+            childTokens.push(this.inline());
+        }
         this.nextToken();
 
-        while(this.lookUpToken(i)!.type != "TOKEN.NEWLINE" && this.lookUpToken(i)!.type != "TOKEN.END"){
-            if(this.lookUpToken(i)!.type == "TOKEN.CURLYOPAREN"){
+        return new UNDERLNE(childTokens);
+
+    }
+
+    boldItalic() : any{
+        var emToken = this.currentToken!;
+
+        var l = (this.currentLevel+=1);
+        
+        this.nextToken();
+
+        var left_delimiter = this.accept(emToken.type) ? emToken.text.repeat(2) : emToken.text;
+        var isBold = left_delimiter.length == 2;
+
+        if(isBold) this.nextToken();
+
+        var endIndex = this.currentIndex;
+        var startIndex = this.currentIndex;
+
+        this.delimiter_run(emToken.type);
+
+        var right_delimiter;
+
+        var lastRun = "";
+        
+        console.log(this.currentIndex, this.currentToken);
+
+        while((!right_delimiter && !this.isNewLine())){
+            
+            var run = "";
+
+            while(this.accept(emToken.type)){
+                run+=this.currentToken!.text;
+                lastRun = run;
+                endIndex = this.currentIndex;
                 
-                while(i >= 0 ){
-                    this.nextToken();
-                    i--;
-                }
-                amount = this.amount();
-                name += chachedName;
-                this.accept("TOKEN.CURLYCPAREN");
-                break;
+                if(endIndex >= this.currentEndIndex) {
+                    console.log("BREAKING");
+                    console.log(this.currentEndIndex, endIndex);
+                    break;
+                
+                };
+                this.nextToken();
             }
-            chachedName += this.lookUpToken(i)!.text;
-            i++;
+
+            this.nextToken();
+
+            right_delimiter = (run.length >= 2 && left_delimiter.length >= 2) || (run.length == 1 && left_delimiter.length == 1);
+
+
         }
 
+        var childs = [];
 
-        return new WORD(name, amount);
+        //**dadsad*
 
-    }
+        
 
-    amount(): AMOUNT | null{
+
+        console.log("1","END:",endIndex, "LEVEL:", l, "LEFT_RUN:", left_delimiter.length, "LAST_RUN:", lastRun);
+
+        endIndex = endIndex - (left_delimiter.length);
+
        
-        if(this.currentToken!.type == "TOKEN.CURLYCPAREN") return null;
+        console.log("2","END:",endIndex, "LEVEL:", l, "LEFT_RUN:", left_delimiter.length);
 
-       var quantity =  this.quantity();
-       var units = null;
-       this.nextToken();
-       var propotial = null;
+        this.currentEndIndex = endIndex;
 
-       if(this.accept("TOKEN.MULTI")){
+        this.currentIndex = startIndex;
 
-        propotial = new PROPOTIAL("1");
+        this.currentToken = this.tokens[this.currentIndex];
 
-        if(this.accept("TOKEN.NUMBER")){
-            propotial.value = this.lookUpToken(-1)!.text;
+        //**adc*c*s
+
+
+
+        while(this.currentIndex <= endIndex){
+            childs.push(this.inline());
         }
-       }
 
-       if(this.accept("TOKEN.PROCENT")){
-        units = this.units();
-       }
 
-       return new AMOUNT(units, quantity, propotial);
+
+        this.currentIndex = endIndex + (left_delimiter.length + 1);
+
+        this.currentToken = this.tokens[this.currentIndex];
+
+        if(l == 0){
+            this.currentLevel = 0;
+            this.currentEndIndex = Infinity;
+        }
+
+        return isBold ? new BOLD(childs) : new ITALIC(childs);
+
+        }
+
+
+
+        injectArray(c:any, nC:any){
+            for (let n = 0; n < nC.length; n++) {
+                c.push(nC[n]);
+                
+            }
+
+            return c;
+        }
+
+
+  delimiter_run(tokenName:string){
+        var count = 0;
+        
+        while(this.accept(tokenName)){
+            count++;
+            this.nextToken();
+        }
+
+        return count;
 
     }
 
-    quantity(): QUANTITY{
-        this.except("TOKEN.NEWLINE");
-        this.except("TOKEN.END");
-        this.except("TOKEN.PROCENT");
-        this.except("TOKEN.CURLYCPAREN");
-        return new QUANTITY(this.currentToken!.text);
+    isNewLine(){
+        return this.accept("TOKEN.NEWLINE") || this.isEnd();
     }
 
-    units(): UNIT{
-        this.except("TOKEN.NEWLINE");
-        this.except("TOKEN.END");
-        this.except("TOKEN.CURLYCPAREN");
-        var units = this.currentToken!.text;
+    isRightRun(delimiters: Run[], currentRun: string){
+        for (let i = 0; i < delimiters.length; i++) {
+            if(delimiters[i].run === currentRun) return i;
+            
+        }
+
+        return -1;
+    }
+
+    addLast(c: any, b?: BOLD| ITALIC): BOLD| ITALIC{
+        
+        if(!b) return c;
+
+        if(b!.child && b!.child.length > 0 && b!.child[b!.child.length - 1].childs ) return this.addLast(c, b!.child[b!.child.length - 1]);
+
+        b!.child.push(c);
+        return b;
+    }
+
+    url(){
         this.nextToken();
 
-        while(!this.accept("TOKEN.NEWLINE") && !this.accept("TOKEN.END") && !this.accept("TOKEN.CURLYCPAREN")){
-            units += this.currentToken!.text;
+        var linkName = "";
+
+        while(!this.accept("TOKEN.CBRACKET")){
+            linkName+=this.currentToken!.text;
             this.nextToken();
         }
 
-        return new UNIT(units);
-    }
+        this.nextToken();
+        this.nextToken();
 
-    boldItalic(TOKEN:string, t:string):MARKDOWN{
-        var mark = new MARKDOWN();
-        var childs = [];
-        var left = 1;
-        var right = 0;
-
-        while(this.currentToken!.type == TOKEN && (left != 2)){ 
-            left++;
-            this.nextToken();
-        };
-
-        var isLeftBold = left == 2;
-
-        childs.push(this.markdown());
-
-        while(!this.accept(TOKEN)){
-            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
-
-                while(left > 0){
-                    childs.unshift(new TEXT("text", t));
-                    left --; 
-                }
-
-                mark.items = childs;
-
-                return mark;
-            }  
-            childs.push(this.markdown());
-        }
-
-        right = 1;
-
-        while(this.currentToken!.type == TOKEN && (right != left)) {
-            right ++
-            this.nextToken();
-        } ;
-
-
-        var isRightBold = right == 2;
-
-        if(isRightBold && isLeftBold){
-            mark.addItem(new BOLD(childs));
-        }else if(!isRightBold && isLeftBold){
-            mark.addItem(new TEXT("text", t));
-            mark.addItem(new ITALIC(childs));
-        }else if(isRightBold && !isLeftBold){
-            mark.addItem(new ITALIC(childs));
-            mark.addItem(new TEXT("text", t));
-        }else if(!isRightBold && !isLeftBold){
-            mark.addItem(new ITALIC(childs));
-        }
-
-        
-        
-        return mark;
-    }
-
-    underline(TOKEN: string, t: string): MARKDOWN{
-        var mark = new MARKDOWN();
-
-        var childs = [this.markdown()];
-
-
-
-        while(!this.accept(TOKEN)){
-
-            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
-                    childs.unshift(new TEXT("text", t));
-
-                mark.items = childs;
-
-                return mark;
-            }  
-
-            childs.push(this.markdown());
-        }
-
-        mark.addItem(new UNDERLNE(childs));
-
-
-        return mark;
-    }
-
-    css(TOKEN:string, t:string): MARKDOWN{
-        var mark = new MARKDOWN();
-
-        var childs = [this.markdown()];
-
-        var props = null;
-
-        while(!this.accept(TOKEN)){
-
-            if(this.currentToken!.type == ("TOKEN.NEWLINE") || this.currentToken!.type == ("TOKEN.END")){
-                childs.unshift(new TEXT("text", t));
-
-            mark.items = childs;
-
-            return mark;
-        }  
-            childs.push(this.markdown());
-        }
-
-        if(this.accept("TOKEN.OBRACKET")){
-            props = this.cssProps();
-           this.expect("TOKEN.CBRACKET");
-       }
-
-       mark.addItem(new CSS(props ?? [], childs))
-
-        return mark;
-    }
-
-    link(){
-        this.expect("TOKEN.OPAREN");
-        var url = "";
-
+        var link = "";
 
         while(!this.accept("TOKEN.CPAREN")){
-            url += this.currentToken!.text;
+            link+=this.currentToken!.text;
             this.nextToken();
         }
+        
+        this.nextToken();
 
-        return new LINK([],url);
+        return new LINK("url",`[${linkName}](${link})`,linkName,link);
     }
 
+    word(){
+        var word = "";
+        var isMultiWord = (this.lookUntil("TOKEN.CURLYOPAREN",0,["TOKEN.AT","TOKEN.HASH", "TOKEN.TILE"]) && this.lookUntil("TOKEN.CURLYCPAREN",0,["TOKEN.AT","TOKEN.HASH", "TOKEN.TILE"]));
 
-    cssProps(): CSS_PROP[]{
-        var props: CSS_PROP[] = [];
-
-        this.except("TOKEN.CURLYOPAREN");
-        this.except("TOKEN.NEWLINE");
-        var value = this.currentToken!.text;
-        this.nextToken();
-        
-        if(!this.accept("TOKEN.EQUAL") && !this.accept("TOKEN.DOUBLEPOINT")){
-          this.throwError();
-        }
-
-        this.except("TOKEN.CURLYOPAREN");
-        this.except("TOKEN.NEWLINE");
-
-        while(this.accept("TOKEN.WHITESPACE"));
-
-        var prop = this.currentToken!.text;
-
-        this.nextToken();
-
-        props.push(new CSS_PROP(value, prop));
-
-        while(this.accept("TOKEN.WHITESPACE"));
-
-        while(this.accept("TOKEN.COMMA")){
-            this.except("TOKEN.CURLYOPAREN");
-            this.except("TOKEN.NEWLINE");
-            var value = this.currentToken!.text;
-            this.nextToken();
+        if(isMultiWord){
             
-            if(!this.accept("TOKEN.EQUAL") && !this.accept("TOKEN.DOUBLEPOINT")){
-              this.throwError();
+            while(!this.accept("TOKEN.CURLYOPAREN")){
+                word+= this.currentToken!.text;
+                this.nextToken();
             }
 
-            this.except("TOKEN.CURLYOPAREN");
-            this.except("TOKEN.NEWLINE");
-
-            var prop = this.currentToken!.text;
-
+            return word;
+        }
+            word = this.currentToken!.text;
             this.nextToken();
+            return word;
+    }
+    
+    amount(): AMOUNT{
+        this.nextToken();
+        
+        var units = "";
+        var quantity = "";
 
-            props.push(new CSS_PROP(value, prop));
+        var hasUnits = (this.lookUntil("TOKEN.PROCENT",0,["TOKEN.CURLYCPAREN"]));
 
+        if(hasUnits){
+            
+            while(!this.accept("TOKEN.PROCENT")){
+                quantity+=this.currentToken!.text;        
+                this.nextToken();
+            }
+            this.nextToken(); //->%->
+
+            while(!this.accept("TOKEN.CURLYCPAREN")){
+                units+= this.currentToken!.text;
+                this.nextToken();
+            }
+
+            this.nextToken() //->}->
+
+            return new AMOUNT("amount", "", quantity, units);
         }
 
-        return props;
+        while(!this.accept("TOKEN.CURLYCPAREN")){
+            quantity+= this.currentToken!.text;
+            this.nextToken();
+        }
+
+        this.nextToken() //->}->
+
+        return new AMOUNT("amount","",quantity,units);
+
     }
 
-    throwError(MESSAGE: string = "PARSING ERROR"){
-        throw new Error(MESSAGE + ` at line ${this.currentToken!.location.col + 1}, at symbol ${this.currentToken!.location.row}`);
-    }
+
 
     parse(tokens: Token[]){
         this.tokens = tokens;
         this.currentToken = this.tokens[0];
         return this.recipe();
     }
-
 }

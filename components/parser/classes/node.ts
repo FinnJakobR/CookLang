@@ -1,10 +1,10 @@
 import { NodeType } from "../../tokenizer/token";
 export default class ParseNode{
-    type: NodeType;
-    value: string;
+    type: string;
+    raw: string;
 
-    constructor(type: NodeType, value:string){
+    constructor(type: string, value:string){
         this.type = type;
-        this.value = value;
+        this.raw = value;
     }
 }

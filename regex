@@ -1,0 +1,104 @@
+
+
+            while(this.accept(emToken.type) && !this.isNewLine()){
+                   var run =  emToken.text.repeat(this.delimiter_run(emToken.type));
+                   var isEnd = delimiters[0]?.run == run;
+                   var isRightRun =  this.isRightRun(delimiters,run) >= 0;
+
+                   if(!isRightRun) delimiters.push({"run":run, child: []}); 
+                   if(isEnd) break;
+            
+                   var c = [];
+                   while(!this.accept(emToken.type)&& !this.isNewLine()){
+                    c.push(this.inline());
+                   };
+
+                   ["**","*","*","**"]
+                   
+                   if(!isRightRun) delimiters[delimiters.length - 1].child = c;
+                   else delimiters[this.isRightRun(delimiters,run)].child = this.injectArray(delimiters[this.isRightRun(delimiters,run)].child, c);
+            }
+
+
+
+            var emToken = this.currentToken!;
+            var delimiters: Run[]  = [];
+
+           var l = (this.currentLevel+=1);
+
+            var firstRun = this.lookUpToken(1)!.type == emToken.type ? "**": "*";
+
+            delimiters[0] = {run :firstRun, child: []};
+
+            this.nextToken();
+
+            if(firstRun.length == 2) this.nextToken();
+
+            var currentIndex = this.currentIndex;
+            var endIndex = this.currentIndex;
+
+            if(this.currentLevel == 0 ) this.currentEndIndex = Infinity;
+
+            var endRun;
+
+            while((!endRun && !this.isNewLine()) && (endIndex < this.currentEndIndex)){
+                var run = "";
+                
+                while(this.accept(emToken.type)){
+                    run += this.currentToken!.text;
+                    this.nextToken();
+                }
+
+                endIndex = this.currentIndex;
+
+
+                this.nextToken();
+
+                endRun = (run.length >= 2 && firstRun.length >=2) || (run.length == 1 && firstRun.length == 1);
+            }
+            
+
+            endIndex-=(firstRun.length + 1);
+
+            this.currentEndIndex = endIndex;
+
+            this.currentIndex = (currentIndex);
+            this.currentToken = this.tokens[currentIndex];
+
+
+            //"asas**adad"
+
+            var childs = [];
+
+            console.log("BEFORE:", currentIndex, endIndex, l);
+
+            while(currentIndex <= endIndex){
+                currentIndex+=1;
+                childs.push(this.inline());
+            }
+
+            delimiters[0].child = childs;
+
+            if(!endRun){
+                //Nicht closed
+                if(delimiters.length == 1){
+                    currentIndex += delimiters[0].run.length;
+                    this.currentToken = this.tokens[currentIndex];
+                    this.currentIndex = currentIndex;
+                    return new TEXT("text",delimiters[0].run,delimiters[0].run);
+                }
+            }
+
+            console.log("INDEX:", this.currentIndex, currentIndex, l);
+
+            this.currentIndex = currentIndex + firstRun.length;
+            this.currentToken = this.tokens[this.currentIndex];
+
+            console.log("AFTER:",l,this.currentIndex, this.tokens[this.currentIndex])
+
+            if(l == 0){
+                this.currentLevel = 0;
+                this.currentEndIndex = Infinity;
+            }
+
+            return firstRun.length == 2 ? new BOLD(childs) : new ITALIC(childs);

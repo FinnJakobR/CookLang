@@ -2,10 +2,12 @@ import ParseNode from "./node";
 
 
 export default class METADATA extends ParseNode{
-    data: any; 
+    option: string;
+    value: string 
 
-    constructor(data: any, type: string, text: string){
-        super(type, text);
-        this.data = data;
+    constructor(option: string, value: string, type: string, raw: string){
+        super(type, raw);
+        this.option = option;
+        this.value = value;
     }
 }

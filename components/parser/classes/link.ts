@@ -1,10 +1,11 @@
-export default class LINK{
-    type = "url";
-    hyperText: any[];
-    url: string;
+import ParseNode from "./node";
 
-    constructor(hyperText: any[], url: string){
-        this.hyperText = hyperText;
-        this.url = url;
+export default class LINK extends ParseNode{
+    hypertext:string;
+    link:string;
+    constructor(type:string, raw:string, hypertext:string, link:string){
+        super(type,raw);
+        this.hypertext = hypertext;
+        this.link = link;
     }
 }

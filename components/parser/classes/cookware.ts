@@ -1,10 +1,14 @@
+import AMOUNT from "./amount";
+import ParseNode from "./node";
 import WORD from "./word";
 
-export default class COOKWARE {
-    type = "cookware";
-    name: WORD;
+export default class COOKWARE extends ParseNode {
+    name:string;
+    amount?: AMOUNT | null;
 
-    constructor(name: WORD) {
+    constructor(type:string, raw: string, name: string, amount?: AMOUNT|null){
+        super(type, raw);
         this.name = name;
+        this.amount = amount;
     }
 }

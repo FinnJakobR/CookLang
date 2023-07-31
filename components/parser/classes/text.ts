@@ -1,9 +1,10 @@
-export default class TEXT {
-    type: string;
-    text: string;
+import ParseNode from "./node";
 
-    constructor(type: string, text:string){
-        this.type = type;
+export default class TEXT extends ParseNode {
+    text:string;
+
+    constructor(type:string, raw:string, text:string){
+        super(type,raw);
         this.text = text;
     }
 }

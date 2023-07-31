@@ -3,7 +3,7 @@ import ParseNode from "./node";
 
 export default class LINE extends ParseNode {
     inline: any[];
-    constructor(type: NodeType, text: string) {
+    constructor(type: string, text: string) {
         super(type, text);
         this.inline = [];
     }

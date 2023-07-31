@@ -1,6 +1,6 @@
 export default class BOLD{
     type = "bold";
-    text = "*";
+    text = "**";
     child: any;
 
     constructor(child: any){

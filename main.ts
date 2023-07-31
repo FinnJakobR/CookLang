@@ -29,6 +29,8 @@ function main(path: PathOrFileDescriptor): void {
 
     const tree = parser.parse(tokens);
 
+    console.log(tree.steps);
+
     writeFileSync("./tree.json", JSON.stringify(tree, null, "\t"));
 
 }
