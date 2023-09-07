@@ -1,6 +1,0 @@
-1. Metadata
-2. Schritte
-3. Utensilien
-4. Zutaten
-5. Timer
-6. Markdown (Bold, recursive, header, color)

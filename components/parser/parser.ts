@@ -29,6 +29,7 @@ export default class Parser {
     tree: ParsingTree;
     currentEndIndex: number;
     currentLevel: number;
+    ingredients: INGREDIENT[];
 
     constructor(){
         this.tokens = [];
@@ -37,6 +38,7 @@ export default class Parser {
         this.tree = new ParsingTree();
         this.currentEndIndex = Infinity;
         this.currentLevel = -1;
+        this.ingredients = [];
     }
     
     nextToken(index?:number): void  {
@@ -165,7 +167,6 @@ export default class Parser {
             var timer = this.timer();
             return timer;
         }else if(this.isBoldItalic()){
-            console.log("BOLD ITALIC");
             var boldItalic = this.boldItalic();
             return boldItalic;
         }else if(this.isUrl()){
@@ -180,31 +181,6 @@ export default class Parser {
             return new TEXT("text",t,t);
         }
     }
-
-
-    inline2(){
-        if(this.isIngredient()){
-            var ingredient = this.ingredient();
-            return ingredient;
-        }else if (this.isCookWare()){
-            var cookware = this.cookware();
-            return cookware;
-        }else if(this.isTimer()){
-            var timer = this.timer();
-            return timer;
-        }else if(this.isUrl()){
-            var url = this.url();
-            return url;
-        }else if(this.isUnderline()){
-            var underline = this.underline()
-            return underline;
-        }else{
-            var t = this.currentToken!.text;
-            this.nextToken();
-            return new TEXT("text",t,t);
-        }
-    }
-
 
     isIngredient(){
         return this.accept("TOKEN.AT") && this.lookUpToken(1).type != "TOKEN.WHITESPACE";
@@ -238,6 +214,8 @@ export default class Parser {
         var hasAmount = (this.accept("TOKEN.CURLYOPAREN") && this.lookUntil("TOKEN.CURLYCPAREN"));
 
         if(hasAmount) amount = this.amount();
+
+        this.ingredients.push(new INGREDIENT("ingredient","",word,amount));
 
         return new INGREDIENT("ingredient","",word,amount)
     }
@@ -333,15 +311,7 @@ export default class Parser {
 
         //**dadsad*
 
-        
-
-
-        console.log("1","END:",endIndex, "LEVEL:", l, "LEFT_RUN:", left_delimiter.length, "LAST_RUN:", lastRun);
-
         endIndex = endIndex - (left_delimiter.length);
-
-       
-        console.log("2","END:",endIndex, "LEVEL:", l, "LEFT_RUN:", left_delimiter.length);
 
         this.currentEndIndex = endIndex;
 

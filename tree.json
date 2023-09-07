@@ -17,9 +17,15 @@
 					"text": " "
 				},
 				{
-					"type": "text",
-					"raw": "the",
-					"text": "the"
+					"type": "underline",
+					"text": "+",
+					"child": [
+						{
+							"type": "text",
+							"raw": "the",
+							"text": "the"
+						}
+					]
 				},
 				{
 					"type": "text",
@@ -297,9 +303,10 @@
 					"text": " "
 				},
 				{
-					"type": "text",
-					"raw": "into",
-					"text": "into"
+					"type": "url",
+					"raw": "[into](https://dsldllsd.de)",
+					"hypertext": "into",
+					"link": "https://dsldllsd.de"
 				},
 				{
 					"type": "text",
