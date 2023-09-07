@@ -1,5 +1,6 @@
 *.js
-node_modules
-example.recipe
-output.html
-tree.json
+*/node_modules
+*/example.recipe
+*/output.html
+*/tree.json
+*/outputs
