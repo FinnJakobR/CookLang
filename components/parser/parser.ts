@@ -12,14 +12,13 @@ import UNDERLNE from "./classes/underline";
 import LINK from "./classes/link";
 import BOLD from "./classes/bold";
 import ITALIC from "./classes/italic";
-import { run } from "node:test";
-import { getEnvironmentData } from "node:worker_threads";
-import { start } from "node:repl";
 
 interface Run {
     run:    string;
     child: any[];
   }
+
+
 
 
 export default class Parser {
@@ -30,6 +29,9 @@ export default class Parser {
     currentEndIndex: number;
     currentLevel: number;
     ingredients: INGREDIENT[];
+    courses: string[];
+    tags: string[];
+    timeInMs: number;
 
     constructor(){
         this.tokens = [];
@@ -39,6 +41,9 @@ export default class Parser {
         this.currentEndIndex = Infinity;
         this.currentLevel = -1;
         this.ingredients = [];
+        this.courses = [];
+        this.tags = [];
+        this.timeInMs = 0;
     }
     
     nextToken(index?:number): void  {
@@ -47,7 +52,7 @@ export default class Parser {
     }
 
     beforeToken(): void {
-        this.currentIndex-=1;
+        this.currentIndex -= 1;
         this.currentToken = this.tokens[this.currentIndex];
     }
 
@@ -110,7 +115,7 @@ export default class Parser {
     lookUntil(tokenName:string, startIndex = 0, types: string[] = []): boolean{
         var lookUpIndex = startIndex;
         while(this.lookUpToken(lookUpIndex)!.type !== tokenName){
-            if(this.lookUpToken(lookUpIndex)!.type === "TOKEN.NEWLINE" || this.lookUpToken(lookUpIndex)!.type === "TOKEN.END" || types.includes(this.lookUpToken(lookUpIndex)!.type)) return false;
+            if((this.lookUpToken(lookUpIndex)!.type === "TOKEN.NEWLINE") || this.lookUpToken(lookUpIndex)!.type === "TOKEN.END" || types.includes(this.lookUpToken(lookUpIndex)!.type)) return false;
             lookUpIndex++;
         }
         return true;
@@ -122,6 +127,7 @@ export default class Parser {
     }
 
     metaData():METADATA | null {
+
         
         var option = "";
         var data = "";
@@ -142,10 +148,22 @@ export default class Parser {
             this.nextToken();
         }
 
+
+        if(option.toLowerCase().trim() == "course"){
+
+            this.courses = data.trim().split(/<>/g).map((e,i)=>e.replaceAll(" ", ""));
+        }
+
+        if(option.toLowerCase().trim() == "tags"){
+            this.tags = data.trim().split(/,|\|/g).map((e,i)=>e.replaceAll(" ", ""));
+        }
+
+
+
         return new METADATA(option.trim(),data.trim(),"meta",`>>${option}:${data}`);
     }
 
-    step(): STEP{
+    step() : STEP{
         var inline: any[] = [];
 
         while(!(this.accept("TOKEN.NEWLINE") && this.lookUpToken(1)!.type === "TOKEN.NEWLINE") && !this.isEnd()){
@@ -279,8 +297,6 @@ export default class Parser {
         var right_delimiter;
 
         var lastRun = "";
-        
-        console.log(this.currentIndex, this.currentToken);
 
         while((!right_delimiter && !this.isNewLine())){
             
@@ -292,8 +308,6 @@ export default class Parser {
                 endIndex = this.currentIndex;
                 
                 if(endIndex >= this.currentEndIndex) {
-                    console.log("BREAKING");
-                    console.log(this.currentEndIndex, endIndex);
                     break;
                 
                 };
@@ -343,17 +357,6 @@ export default class Parser {
         }
 
 
-
-        injectArray(c:any, nC:any){
-            for (let n = 0; n < nC.length; n++) {
-                c.push(nC[n]);
-                
-            }
-
-            return c;
-        }
-
-
   delimiter_run(tokenName:string){
         var count = 0;
         
@@ -377,16 +380,6 @@ export default class Parser {
         }
 
         return -1;
-    }
-
-    addLast(c: any, b?: BOLD| ITALIC): BOLD| ITALIC{
-        
-        if(!b) return c;
-
-        if(b!.child && b!.child.length > 0 && b!.child[b!.child.length - 1].childs ) return this.addLast(c, b!.child[b!.child.length - 1]);
-
-        b!.child.push(c);
-        return b;
     }
 
     url(){

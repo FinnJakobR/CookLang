@@ -1,4 +1,7 @@
 *.js
+*.json
+*.txt
+*.html
 */node_modules
 */example.recipe
 */output.html

@@ -1,0 +1,857 @@
+{
+	"metadata": [
+		{
+			"type": "meta",
+			"raw": ">> course: Mittag",
+			"option": "course",
+			"value": "Mittag"
+		},
+		{
+			"type": "meta",
+			"raw": ">> tags: Hülsenfrüchte | Vegan ",
+			"option": "tags",
+			"value": "Hülsenfrüchte | Vegan"
+		},
+		{
+			"type": "meta",
+			"raw": ">> Gesamtzeit: 45 Minuten",
+			"option": "Gesamtzeit",
+			"value": "45 Minuten"
+		}
+	],
+	"steps": [
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Olivenöl",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "100",
+						"units": "ml"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "in",
+					"text": "in"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "einem",
+					"text": "einem"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "Schmortopf",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "erhitzen.",
+					"text": "erhitzen."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Die",
+					"text": "Die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Auberginen",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "3",
+						"units": "mittelgroße"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "hinzufügen",
+					"text": "hinzufügen"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "timer",
+					"raw": "",
+					"name": "Auberginen braten",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "10",
+						"units": "minuten"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ".",
+					"text": "."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Dabei",
+					"text": "Dabei"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "bold",
+					"text": "**",
+					"child": [
+						{
+							"type": "text",
+							"raw": "regelmäßig",
+							"text": "regelmäßig"
+						},
+						{
+							"type": "text",
+							"raw": " ",
+							"text": " "
+						},
+						{
+							"type": "text",
+							"raw": "umrühren",
+							"text": "umrühren"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"raw": ".",
+					"text": "."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Die",
+					"text": "Die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "gehackten",
+					"text": "gehackten"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Zwiebeln",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1",
+						"units": ""
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "den",
+					"text": "den"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "gehackten",
+					"text": "gehackten"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "knoblauch",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "3",
+						"units": ""
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "zugeben",
+					"text": "zugeben"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "timer",
+					"raw": "",
+					"name": "",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "5",
+						"units": "minuten"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "unter",
+					"text": "unter"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "bold",
+					"text": "**",
+					"child": [
+						{
+							"type": "text",
+							"raw": "rühren",
+							"text": "rühren"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "garen.",
+					"text": "garen."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Die",
+					"text": "Die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Kartoffeln",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "350",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "bold",
+					"text": "**",
+					"child": [
+						{
+							"type": "text",
+							"raw": "schälen",
+							"text": "schälen"
+						},
+						{
+							"type": "text",
+							"raw": " ",
+							"text": " "
+						},
+						{
+							"type": "text",
+							"raw": "und",
+							"text": "und"
+						},
+						{
+							"type": "text",
+							"raw": " ",
+							"text": " "
+						},
+						{
+							"type": "text",
+							"raw": "würfeln",
+							"text": "würfeln"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "die",
+					"text": "die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Kicherebsen",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "150",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "die",
+					"text": "die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "passierten Tomaten",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "400",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "aus",
+					"text": "aus"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "der",
+					"text": "der"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Konserve",
+					"text": "Konserve"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "mit",
+					"text": "mit"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "in",
+					"text": "in"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "den",
+					"text": "den"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "Schmortopf",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "geben.",
+					"text": "geben."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Die",
+					"text": "Die"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Gewürze",
+					"text": "Gewürze"
+				},
+				{
+					"type": "text",
+					"raw": ":",
+					"text": ":"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Zucker",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1",
+						"units": "EL"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Kreuzkümmelpulver",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1",
+						"units": "TL"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Salz",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1/2",
+						"units": "TL"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "gemahlender Zimt",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1",
+						"units": "TL"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "auch",
+					"text": "auch"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "in",
+					"text": "in"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "den",
+					"text": "den"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "Schmortopf",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "geben",
+					"text": "geben"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "und",
+					"text": "und"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "für",
+					"text": "für"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "weitere",
+					"text": "weitere"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "timer",
+					"raw": "",
+					"name": "",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "20",
+						"units": "min"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "unter",
+					"text": "unter"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "bold",
+					"text": "**",
+					"child": [
+						{
+							"type": "text",
+							"raw": "schwacher",
+							"text": "schwacher"
+						},
+						{
+							"type": "text",
+							"raw": " ",
+							"text": " "
+						},
+						{
+							"type": "text",
+							"raw": "Hitze",
+							"text": "Hitze"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "kochen.",
+					"text": "kochen."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Mit",
+					"text": "Mit"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "Oregano",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1",
+						"units": "TL"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "servieren.",
+					"text": "servieren."
+				}
+			]
+		}
+	],
+	"courses": [],
+	"tags": [
+		"Hülsenfrüchte",
+		"Vegan"
+	]
+}

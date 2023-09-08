@@ -1,0 +1,2893 @@
+{
+	"metadata": [
+		{
+			"type": "meta",
+			"raw": ">> course: Dinner",
+			"option": "course",
+			"value": "Dinner"
+		},
+		{
+			"type": "meta",
+			"raw": ">> tags: Healthy, Vegan",
+			"option": "tags",
+			"value": "Healthy, Vegan"
+		}
+	],
+	"steps": [
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Preheat",
+					"text": "Preheat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "oven",
+					"text": "oven"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "to",
+					"text": "to"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "180",
+					"text": "180"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "C",
+					"text": "C"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "before",
+					"text": "before"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "beginning",
+					"text": "beginning"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "your",
+					"text": "your"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "prep.",
+					"text": "prep."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Rinse",
+					"text": "Rinse"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "bream",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "450",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "or",
+					"text": "or"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "your",
+					"text": "your"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "choice",
+					"text": "choice"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "of",
+					"text": "of"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish,",
+					"text": "fish,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "remove",
+					"text": "remove"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "any",
+					"text": "any"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "scales",
+					"text": "scales"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "that",
+					"text": "that"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "may",
+					"text": "may"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "remain,",
+					"text": "remain,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "as",
+					"text": "as"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "well",
+					"text": "well"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "as",
+					"text": "as"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fins.",
+					"text": "fins."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "You",
+					"text": "You"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "can",
+					"text": "can"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "mostly",
+					"text": "mostly"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "have",
+					"text": "have"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "this",
+					"text": "this"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "done",
+					"text": "done"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "by",
+					"text": "by"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "your",
+					"text": "your"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "local",
+					"text": "local"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fishmonger.",
+					"text": "fishmonger."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Make",
+					"text": "Make"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "slit",
+					"text": "slit"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "in",
+					"text": "in"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "back,",
+					"text": "back,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "separate",
+					"text": "separate"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "flesh",
+					"text": "flesh"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "from",
+					"text": "from"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "bones",
+					"text": "bones"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "using",
+					"text": "using"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "flat",
+					"text": "flat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "knife,",
+					"text": "knife,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "cut",
+					"text": "cut"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "out",
+					"text": "out"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "centre",
+					"text": "centre"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "bone.",
+					"text": "bone."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Rove",
+					"text": "Rove"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "guts,",
+					"text": "guts,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "rinse",
+					"text": "rinse"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "pat",
+					"text": "pat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "dry",
+					"text": "dry"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "paper",
+					"text": "paper"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "towel.",
+					"text": "towel."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Again,",
+					"text": "Again,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "one",
+					"text": "one"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "can",
+					"text": "can"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "usually",
+					"text": "usually"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "buy",
+					"text": "buy"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "already",
+					"text": "already"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "prepared",
+					"text": "prepared"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "for",
+					"text": "for"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "you.",
+					"text": "you."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Rinse",
+					"text": "Rinse"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "pat",
+					"text": "pat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "dry",
+					"text": "dry"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "courgette",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "50",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "lemon",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "40",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "red bell pepper",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "50",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "cherry tomatoes",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "30",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ".",
+					"text": "."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Peel",
+					"text": "Peel"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "red onion",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "30",
+						"units": "g"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "slice",
+					"text": "slice"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "onion",
+					"text": "onion"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "into",
+					"text": "into"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "half",
+					"text": "half"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "rings,",
+					"text": "rings,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "cut",
+					"text": "cut"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "courgettes",
+					"text": "courgettes"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "into",
+					"text": "into"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "thin",
+					"text": "thin"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "rounds",
+					"text": "rounds"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "red",
+					"text": "red"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "pepper",
+					"text": "pepper"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "into",
+					"text": "into"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "medium",
+					"text": "medium"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "slices,",
+					"text": "slices,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "halve",
+					"text": "halve"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "cherry",
+					"text": "cherry"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "tomatoes.",
+					"text": "tomatoes."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "Drizzle",
+					"text": "Drizzle"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "freshly",
+					"text": "freshly"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "squeezed",
+					"text": "squeezed"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "lemon",
+					"text": "lemon"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "juice",
+					"text": "juice"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "sprinkle",
+					"text": "sprinkle"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "of",
+					"text": "of"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "olive",
+					"text": "olive"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "oil,",
+					"text": "oil,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "then",
+					"text": "then"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "season",
+					"text": "season"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "salt",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "grind",
+					"text": "grind"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "of",
+					"text": "of"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "black",
+					"text": "black"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "pepper.",
+					"text": "pepper."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Heat",
+					"text": "Heat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "frying pan",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "",
+						"units": ""
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "over",
+					"text": "over"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "medium",
+					"text": "medium"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "heat",
+					"text": "heat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "little",
+					"text": "little"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "oil",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "just",
+					"text": "just"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "to",
+					"text": "to"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "prevent",
+					"text": "prevent"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "sticking",
+					"text": "sticking"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "help",
+					"text": "help"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "browning.",
+					"text": "browning."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "Sauté",
+					"text": "Sauté"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "chopped",
+					"text": "chopped"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "vegetables",
+					"text": "vegetables"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "provence herbs",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "1/2",
+						"units": "tsp"
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "ingredient",
+					"raw": "",
+					"name": "salt",
+					"amount": null
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "pepper.",
+					"text": "pepper."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "On",
+					"text": "On"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "flat",
+					"text": "flat"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "baking tray",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "",
+						"units": ""
+					}
+				},
+				{
+					"type": "text",
+					"raw": ",",
+					"text": ","
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "place",
+					"text": "place"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "on",
+					"text": "on"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "cookware",
+					"raw": "",
+					"name": "tin foil",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "",
+						"units": ""
+					}
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "shiny",
+					"text": "shiny"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "side",
+					"text": "side"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "down",
+					"text": "down"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "so",
+					"text": "so"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "as",
+					"text": "as"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "not",
+					"text": "not"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "to",
+					"text": "to"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "reflect",
+					"text": "reflect"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "heat,",
+					"text": "heat,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "you",
+					"text": "you"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "can",
+					"text": "can"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "also",
+					"text": "also"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "use",
+					"text": "use"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "baking",
+					"text": "baking"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "paper.",
+					"text": "paper."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "stuff",
+					"text": "stuff"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "roasted",
+					"text": "roasted"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "vegetables",
+					"text": "vegetables"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "bake",
+					"text": "bake"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "for",
+					"text": "for"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "timer",
+					"raw": "",
+					"name": "",
+					"amount": {
+						"type": "amount",
+						"raw": "",
+						"quantity": "15",
+						"units": "minutes"
+					}
+				},
+				{
+					"type": "text",
+					"raw": ".",
+					"text": "."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "It",
+					"text": "It"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "is",
+					"text": "is"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "also",
+					"text": "also"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "nice",
+					"text": "nice"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "to",
+					"text": "to"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "top",
+					"text": "top"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fresh",
+					"text": "fresh"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fennel",
+					"text": "fennel"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "for",
+					"text": "for"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "baking,",
+					"text": "baking,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "if",
+					"text": "if"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "you",
+					"text": "you"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "should",
+					"text": "should"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "have",
+					"text": "have"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "any",
+					"text": "any"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "around.",
+					"text": "around."
+				}
+			]
+		},
+		{
+			"type": "step",
+			"raw": "",
+			"inline": [
+				{
+					"type": "text",
+					"raw": "After",
+					"text": "After"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "baking,",
+					"text": "baking,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "take",
+					"text": "take"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "out",
+					"text": "out"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "of",
+					"text": "of"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "oven",
+					"text": "oven"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "place",
+					"text": "place"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "on",
+					"text": "on"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "a",
+					"text": "a"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "platter,",
+					"text": "platter,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "garnish",
+					"text": "garnish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "either",
+					"text": "either"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fresh",
+					"text": "fresh"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "or",
+					"text": "or"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "roasted",
+					"text": "roasted"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "cherry",
+					"text": "cherry"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "tomatoes,",
+					"text": "tomatoes,"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "roasted",
+					"text": "roasted"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "whole",
+					"text": "whole"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "garlic",
+					"text": "garlic"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "cloves",
+					"text": "cloves"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "(",
+					"text": "("
+				},
+				{
+					"type": "text",
+					"raw": "these",
+					"text": "these"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "can",
+					"text": "can"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "be",
+					"text": "be"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "done",
+					"text": "done"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "when",
+					"text": "when"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "baking",
+					"text": "baking"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "the",
+					"text": "the"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": ")",
+					"text": ")"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "wedges",
+					"text": "wedges"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "of",
+					"text": "of"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "lemon.",
+					"text": "lemon."
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "The",
+					"text": "The"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "fish",
+					"text": "fish"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "also",
+					"text": "also"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "goes",
+					"text": "goes"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "nicely",
+					"text": "nicely"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "with",
+					"text": "with"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "baby",
+					"text": "baby"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "new",
+					"text": "new"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "potatoes",
+					"text": "potatoes"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "and",
+					"text": "and"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "garlic",
+					"text": "garlic"
+				},
+				{
+					"type": "text",
+					"raw": " ",
+					"text": " "
+				},
+				{
+					"type": "text",
+					"raw": "butter.",
+					"text": "butter."
+				}
+			]
+		}
+	],
+	"courses": [],
+	"tags": [
+		"Healthy",
+		"Vegan"
+	]
+}

@@ -28,7 +28,7 @@ export class Lexer {
         if(this.is_not_empty()){
             var currentChar: string = this.source[this.cursor];
             this.cursor = this.cursor + 1;
-            if(currentChar === "\n"){
+            if(currentChar.match(/\n|\r/)){
                 this.currentLineIndex = this.cursor;
                 this.row = this.row + 1;
             }
@@ -68,7 +68,7 @@ export class Lexer {
     }
 
     drop_line():void {
-        while(this.is_not_empty() && this.source[this.cursor] != "\n"){
+        while(this.is_not_empty() && !(this.source[this.cursor].match(/\n|\r/))){
             this.chop_char();
         }
 
@@ -132,7 +132,7 @@ export class Lexer {
 
         if(!this.is_not_empty()) return false;
 
-        throw Error(`Unexpected Token: ${first_char} at ${loc.col}`);
+        throw Error(`Unexpected Token: ${JSON.stringify({x: first_char})} at ${loc.col}`);
     }
 
 }

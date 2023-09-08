@@ -43,20 +43,15 @@ import STEP from "./step";
  
 
 export default class ParsingTree {
-    tree: any;
     metadata: METADATA[];
     steps: STEP[];
+    courses: null | string[];
+    tags: null | string[];
     constructor(){
-        this.tree = {};
+        this.courses = null;
+        this.tags = null;
         this.metadata = [];
         this.steps = [];
-    }
-    search(pointer: string): any {
-        return this.tree[pointer];
-    }
-    insert(node: any){
-        this.tree["root"] = node;
-        return node;
     }
 
     addMetaData(data: METADATA): void{
